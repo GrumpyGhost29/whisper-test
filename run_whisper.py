@@ -14,7 +14,10 @@ for infile in infiles:
     outfile = outdirpath + infile.split('.')[0] + '.txt'
     print(outfile)
     transcript = model.transcribe(indirpath + infile, language='de')
+    rawtext = transcript['text']
+    text = transcript['text'].replace('. ', '.\n')
+    text = text.lstrip()
     with open(outfile, 'w') as f:
-        f.write(transcript["text"])
+        f.write(text)
 
 print("done")
