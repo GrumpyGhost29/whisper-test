@@ -1,4 +1,3 @@
-#/bin/sh
-
+#!/bin/sh
 docker build -t whisper .
-docker-compose run whisper
+docker compose -f docker-compose-dev.yaml run whisper

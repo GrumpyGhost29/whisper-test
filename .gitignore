@@ -1,4 +1,4 @@
 .idea
-models/*
 storage/inputs/*
+storage/models/*
 storage/outputs/*

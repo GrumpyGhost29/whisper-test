@@ -10,5 +10,4 @@ RUN pip install -U openai-whisper && \
 
 WORKDIR /app
 
-# This will include the model if you're run publish.sh correctly
 COPY . /app

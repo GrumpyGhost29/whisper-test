@@ -2,6 +2,7 @@ services:
   whisper:
     container_name: "whisper"
     image: "grumpyghost29/images:whisper"
+    pull_policy: always
     volumes:
       - ./storage:/app/storage
     command: ['python3', 'run_whisper.py']
