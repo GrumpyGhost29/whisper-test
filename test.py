@@ -1,10 +1,16 @@
 import whisper
 import os
 
-path = 'inputs/'
-files = os.listdir(path)
+indirpath = 'inputs/'
+infiles = os.listdir(indirpath)
 model = whisper.load_model("large")
 
-for file in files:
-    result = model.transcribe(path + file, language='de')
-    print(result["text"])
+outdirpath = 'outputs/'
+
+for file in infiles:
+    if file == '.gitkeep':
+        continue
+    print(f'processing file: {file} -------------------------------------')
+    result = model.transcribe(indirpath + file, language='de')
+    with open(outdirpath + file, 'w') as f:
+        f.write(result["text"])

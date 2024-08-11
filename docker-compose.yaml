@@ -1,7 +1,7 @@
 services:
-  python:
-    container_name: "python"
-    image: "whisper-test:latest"
+  whisper:
+    container_name: "whisper"
+    image: "whisper:latest"
     volumes:
       - ./inputs:/app/inputs
     command: ['python3', 'test.py']
