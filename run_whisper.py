@@ -5,7 +5,7 @@ storagedir = 'storage'
 indirpath = storagedir + '/inputs/'
 outdirpath = storagedir + '/outputs/'
 infiles = os.listdir(indirpath)
-model = whisper.load_model("large")
+model = whisper.load_model("large", download_root="/app/models")
 
 for infile in infiles:
     if infile == '.gitkeep':

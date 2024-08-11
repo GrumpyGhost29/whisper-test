@@ -6,11 +6,9 @@ RUN mkdir -p /app
 RUN pip install -U openai-whisper && \
     apt update && \
     apt install -y ffmpeg && \
-    rm -rf /var/lib/apt/lists/* \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-COPY audio_test.m4a .
-RUN whisper audio_test.m4a --model large --language de
-
+# This will include the model if you're run publish.sh correctly
 COPY . /app
