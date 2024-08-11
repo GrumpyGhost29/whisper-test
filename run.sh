@@ -1,3 +1,2 @@
 #/bin/sh
-
-docker-compose run whisper
+docker compose run whisper
