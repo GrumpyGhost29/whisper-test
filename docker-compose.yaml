@@ -3,5 +3,5 @@ services:
     container_name: "whisper"
     image: "whisper:latest"
     volumes:
-      - ./inputs:/app/inputs
-    command: ['python3', 'test.py']
+      - ./storage:/app/storage
+    command: ['python3', 'run_whisper.py']
