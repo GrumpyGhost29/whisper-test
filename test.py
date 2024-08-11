@@ -1,7 +1,7 @@
 import whisper
 import os
 
-indirpath = 'inpuuuuuuts/'
+indirpath = 'inputs/'
 infiles = os.listdir(indirpath)
 model = whisper.load_model("large")
 
